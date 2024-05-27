@@ -1,38 +1,42 @@
 "use client";
 
-import Image from "next/image";
-import Lottie from "react-lottie";
-import MagicButton from "../components/ui/MagicButon";
-import { IoCopyOutline } from "react-icons/io5";
+
+
 import React, { useState } from "react";
 import { WobbleCard } from "./ui/wobble-card";
 import { gridItems } from "../Data/index";
-import { Italiana } from "next/font/google";
+;
 import { Vortex } from "./ui/vortex";
 import GridGlobe from "./ui/GridGlobe";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { people } from "../Data/index";
 import animationData from '../Data/confetti.json';
-
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { Meteors } from "./ui/meteors";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { BackgroundBeams } from "./ui/background-beams";
 const Grid = () => {
   const Lists = ["ReactJS", "Tailwind", "Typescript", "NodeJS", "NextJS", "Rest"];
-  const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+  const words = [
+    {
+      text: "Build",
     },
-  };
-
-  const handleCopy = () => {
-    const text = "vilokmasuti@outlook.com";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
-
+    {
+      text: "awesome",
+    },
+    {
+      text: "apps",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Aceternity.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
   return (
     <section id="about">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
@@ -44,7 +48,7 @@ const Grid = () => {
             <div className="max-w-xs max-sm:h-[10px]" key={item.id}>
               {item.id === 2 && (
                 <>
-                  <h2 className="text-center font-serif text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                  <h2 className="text-center font-serif text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]   bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-900">
                     {item.title}
                   </h2>
                   <p className="mt-4 text-left text-base/6 text-neutral-200">
@@ -65,23 +69,19 @@ const Grid = () => {
 
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]"
-          className=""
+          className= " bg-black"
         >
-          <Vortex>
-            <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 left-[550px] right-0${copied ? "block" : "hidden"}`}>
-                <Lottie options={defaultOptions} height={200} width={400} />
-              
-              <MagicButton
-                title={copied ? "Copied!" : " Email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="border-none  mx-auto w-[100px]"
-              />
-              </div>
-            </div>
-          </Vortex>
+  <div className=' max-w-[89vw] md:max-2xl: lg:max-w-[60vw] flex flex-col items-center justify-center'>
+        
+          <TextGenerateEffect words="Transforming Concepts Into Seamless User Experiences" className='  uppercase fon text-center  md:text-5xl  lg:text-[100px] max-sm:mt-24  max-sm:font-mono max-sm:font-bold  lg:ml-48'  />
+          <BackgroundBeams />
+          {/* <Meteors number={40} /> */}
+
+        </div>
+
+   
+        
+          
         </WobbleCard>
       </div>
     </section>
