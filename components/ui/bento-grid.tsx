@@ -6,7 +6,9 @@ import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 
 import { cn } from "@/utils/cn";
-import animationData from "@/data/confetti.json";
+import animationData from '../../Data/confetti.json';
+
+
 
 import MagicButton from "../../components/ui/MagicButon";
 import { Vortex } from "../ui/vortex";
