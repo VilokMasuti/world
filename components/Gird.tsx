@@ -1,61 +1,89 @@
 "use client";
+
 import Image from "next/image";
-import React from "react";
+import Lottie from "react-lottie";
+import MagicButton from "../components/ui/MagicButon";
+import { IoCopyOutline } from "react-icons/io5";
+import React, { useState } from "react";
 import { WobbleCard } from "./ui/wobble-card";
+import { gridItems } from "../Data/index";
+import { Italiana } from "next/font/google";
+import { Vortex } from "./ui/vortex";
+import GridGlobe from "./ui/GridGlobe";
+import { AnimatedTooltip } from "./ui/animated-tooltip";
+import { people } from "../Data/index";
+import animationData from '../Data/confetti.json';
 
 const Grid = () => {
+  const Lists = ["ReactJS", "Tailwind", "Typescript", "NodeJS", "NextJS", "Rest"];
+  const [copied, setCopied] = useState(false);
+
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const handleCopy = () => {
+    const text = "vilokmasuti@outlook.com";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+
   return (
     <section id="about">
-     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
-      <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
-        className=""
-      >
-        <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
-          </h2>
-          <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
-          </p>
-        </div>
-        <Image
-          src="/linear.webp"
-          width={500}
-          height={500}
-          alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
-        </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
-        </p>
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
-          </p>
-        </div>
-        <Image
-          src="/linear.webp"
-          width={500}
-          height={500}
-          alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-    </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full min-h-[300px] lg:min-h-[300px]"
+          className="bg-black"
+        >
+          {gridItems.map((item) => (
+            <div className="max-w-xs max-sm:h-[10px]" key={item.id}>
+              {item.id === 2 && (
+                <>
+                  <h2 className="text-center font-serif text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                    {item.title}
+                  </h2>
+                  <p className="mt-4 text-left text-base/6 text-neutral-200">
+                    {item.description}
+                  </p>
+                  <GridGlobe />
+                </>
+              )}
+            </div>
+          ))}
+        </WobbleCard>
+
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-black" className="bg-black">
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={people} />
+          </div>
+        </WobbleCard>
+
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]"
+          className=""
+        >
+          <Vortex>
+            <div className="mt-5 relative">
+              <div className={`absolute -bottom-5 left-[550px] right-0${copied ? "block" : "hidden"}`}>
+                <Lottie options={defaultOptions} height={200} width={400} />
+              
+              <MagicButton
+                title={copied ? "Copied!" : " Email"}
+                icon={<IoCopyOutline />}
+                position="left"
+                handleClick={handleCopy}
+                otherClasses="border-none  mx-auto w-[100px]"
+              />
+              </div>
+            </div>
+          </Vortex>
+        </WobbleCard>
+      </div>
     </section>
   );
 };
