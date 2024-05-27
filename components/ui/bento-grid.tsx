@@ -10,7 +10,7 @@ import { cn } from "../../utils/cn";
 
 
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
+import animationData from "../../Data/confetti.json";
 import MagicButton from "../ui/MagicButon";
 
 export const BentoGrid = ({
