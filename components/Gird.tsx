@@ -62,8 +62,9 @@ const Grid = () => {
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-black" className="bg-black">
-          <div className="flex flex-row items-center justify-center mb-10 w-full">
-            <AnimatedTooltip items={people} />
+          <div className="flex flex-row max-sm:flex-col max-sm:tracking-widest animate-pulse duration-1000 max-sm:text-4xl items-center justify-center mb-10 w-full   gap-2">
+            <h1 className=" font-mono font-semibold  text-3xl">TechStack</h1>
+            <AnimatedTooltip items={people}  />
           </div>
         </WobbleCard>
 
