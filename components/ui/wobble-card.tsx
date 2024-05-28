@@ -42,7 +42,7 @@ export const WobbleCard = ({
       )}
     >
       <div
-        className="relative  h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]  sm:mx-0 sm:rounded-2xl overflow-hidden"
+        className="relative  h-full  sm:mx-0 sm:rounded-2xl overflow-hidden"
         
       >
         <motion.div
@@ -65,7 +65,7 @@ export const WobbleCard = ({
 const Noise = () => {
   return (
     <div
-      className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
+      className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(,transparent,75%)]"
       style={{
         backgroundImage: "url(/noise.webp)",
         backgroundSize: "30%",
