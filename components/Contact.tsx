@@ -54,7 +54,7 @@ const Contact = () => {
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
         </p>
-        <div className='flex gap-11 max-sm:flex-col max-sm:pt-5 max-sm:gap-12 max-sm:flex max-sm:ml-20 '>
+        <div className='flex gap-11 max-sm:flex-col max-sm:pt-5 max-sm:gap-12 max-sm:flex  '>
         <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}
               {/* add rounded-md h-8 md:h-8, remove rounded-full */}
@@ -75,13 +75,7 @@ const Contact = () => {
                 handleClick={handleCopy}
                
               />
-                <a href="vilokmasuti@outlook.com">
-            <MagicButon
-              title="Let's get in touch"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+
             </div>
          
 
@@ -89,6 +83,13 @@ const Contact = () => {
 
         
         </div>
+        <a href="vilokmasuti@outlook.com">
+            <MagicButon
+              title="Let's get in touch"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">

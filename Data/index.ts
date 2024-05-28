@@ -211,9 +211,9 @@ export const socialMedia = [
   },
   
   {
-    id: 3,
+    id: 2,
     img: "/link.svg",
-    link:"www.linkedin.com/in/vilok-masuti-99aab8252"
+    link:'https://www.linkedin.com/in/vilok-masuti-99aab8252/?originalSubdomain=in'
   },
 ];
 export const people = [
