@@ -1,10 +1,14 @@
 import Hero from "@/components/Hero";
 
 import { FloatingNav } from "../components/ui/floating-navbar";
-import { FaHouseChimney } from "react-icons/fa6";
+
 import Gird from "@/components/Gird";
 import Projects from "@/components/Projects";
 import { navItems } from "@/Data";
+import Quote from "@/components/Quote";
+
+import Contact from "@/components/Contact";
+import Approach from "@/components/Approach";
 
 export default function Home() {
   return (
@@ -14,6 +18,9 @@ export default function Home() {
 <Hero/>
  <Gird/> 
 <Projects/>
+<Quote/>
+ <Approach/> 
+<Contact/>
       </div>
     
     </main>

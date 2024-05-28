@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -205,14 +207,13 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link:"https://github.com/VilokMasuti"
   },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
+  
   {
     id: 3,
     img: "/link.svg",
+    link:"www.linkedin.com/in/vilok-masuti-99aab8252"
   },
 ];
 export const people = [
