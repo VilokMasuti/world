@@ -219,26 +219,33 @@ export const socialMedia = [
 export const people = [
   {
     id: 1,
+    name: "Javascript",
+    designation: "8/10",
+    image:
+    "/j.svg",
+  },
+  {
+    id: 2,
     name: "React",
     designation: "8/10",
     image:
     "/re.svg",
   },
   {
-    id: 2,
+    id: 3,
     name: "NextJs",
     designation: "8/10",
     image:
       "/next.svg",
   },
   {
-    id: 3,
+    id: 4,
     name: "TailwindCss",
     designation: "9/10",
     image:"/tail.svg",
      },
   {
-    id: 4,
+    id: 5,
     name: "TypeScript",
     designation: "7/10",
     image:

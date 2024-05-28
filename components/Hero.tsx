@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
       <div className=' flex justify-center relative my-20 z-10'>
         <div className=' max-w-[89vw] md:max-2xl: lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          <h2 className=' uppercase text-xs text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-900 font-bold max-w-80 tracking-wider'> Build a <FlipWords words={word} /> Webapp  With me</h2>
+          <h2 className=' uppercase text-xs text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-900 font-bold max-w-80 tracking-wider'> Collaborate For <FlipWords words={word} /> Webapp&apos;s</h2>
           <TextGenerateEffect words="Transforming Concepts Into Seamless User Experiences" className='  text-center text-[40px] md:text-5xl lg:text-6x  ' />
         <p className=' gap-3 text-center md:tracking-wider mb-4 md:text-lg lg:text-3xl bg-clip-text text-transparent bg-gradient-to-b font-semibold from-neutral-950 to-neutral-50'>
           Hey,I&apos;m VILOK,Frontend Developer Based In India

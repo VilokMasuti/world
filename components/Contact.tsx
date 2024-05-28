@@ -23,8 +23,16 @@ const Contact = () => {
   };
 
   const handleCopy = () => {
-    const text = "vilokmasuti@outlook.com";
+    const text = " 9731594346";
     navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+
+  const handleWhatsAppClick = () => {
+    setCopied(true);
+  };
+
+  const handleGmailClick = () => {
     setCopied(true);
   };
 
@@ -46,40 +54,59 @@ const Contact = () => {
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
         </p>
-        <a href="mailto:contact@jsmastery.pro">
-          <MagicButon
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-        <div>
-          <Link href="https://minimal-portfolio-swart.vercel.app/">
-          <FaWhatsapp/>
-          </Link>
+        <div className='flex gap-11 max-sm:flex-col'>
+        <div className="mt-5 relative">
+              {/* button border magic from tailwind css buttons  */}
+              {/* add rounded-md h-8 md:h-8, remove rounded-full */}
+              {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
+              {/* add handleCopy() for the copy the text */}
+              <div
+                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
+                  }`}
+              >
+                {/* <img src="/confetti.gif" alt="confetti" /> */}
+                <Lottie options={defaultOptions} height={200} width={400} />
+              </div>
 
+              <MagicButon
+                title={copied ? "Number is Copied!" : "Copy My Number"}
+                icon={<IoCopyOutline />}
+                position="left"
+                handleClick={handleCopy}
+               
+              />
+                <a href="mailto:contact@jsmastery.pro">
+            <MagicButon
+              title="Let's get in touch"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
+            </div>
+         
 
+        
+
+        
         </div>
       </div>
+
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2024 VILOK MASUTI
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
-  {socialMedia.map((info) => (
-    <Link  href={info.link} key={info.id}>
-      <div
-        className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-      >
-        <img src={info.img} alt="dd" width={20} height={20} />
-      </div>
-    </Link>
-  ))}
-</div>
-
-           
-           
+          {socialMedia.map((info) => (
+            <Link href={info.link} key={info.id}>
+              <div
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              >
+                <img src={info.img} alt="dd" width={20} height={20} />
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </footer>
   );
