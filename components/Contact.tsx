@@ -75,7 +75,7 @@ const Contact = () => {
                 handleClick={handleCopy}
                
               />
-                <a href="mailto:contact@jsmastery.pro">
+                <a href="vilokmasuti@outlook.com">
             <MagicButon
               title="Let's get in touch"
               icon={<FaLocationArrow />}
