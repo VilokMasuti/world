@@ -2,19 +2,18 @@
 
 
 
-import React, { useState } from "react";
+
 import { WobbleCard } from "./ui/wobble-card";
 import { gridItems } from "../Data/index";
-;
-import { Vortex } from "./ui/vortex";
+
 import GridGlobe from "./ui/GridGlobe";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { people } from "../Data/index";
-import animationData from '../Data/confetti.json';
+
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
 import { Meteors } from "./ui/meteors";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
+
 import { BackgroundBeams } from "./ui/background-beams";
 const Grid = () => {
   const Lists = ["ReactJS", "Tailwind", "Typescript", "NodeJS", "NextJS", "Rest"];
