@@ -54,42 +54,21 @@ const Contact = () => {
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
         </p>
-        <div className='flex gap-11 max-sm:flex-col max-sm:pt-5 max-sm:gap-12 max-sm:flex  '>
-        <div className="mt-5 relative">
-              {/* button border magic from tailwind css buttons  */}
-              {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-              {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-              {/* add handleCopy() for the copy the text */}
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
-              >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
-
-              <MagicButon
-                title={copied ? "Number is Copied!" : "Copy My Number"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-               
-              />
-
-            </div>
-         
-
-        
-
-        
-        </div>
-        <a href="vilokmasuti@outlook.com">
+       <div className='flex gap-5 max-sm:flex-col'>
+       <a href="vilokmasuti@outlook.com">
             <MagicButon
               title="Let's get in touch"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </a> 
+          <Link href=" https://wa.me/9731594346 ">
+          <FaWhatsapp size={ 40} className=' cursor-pointer max-sm:ml-[100px] animate-spin duration-1000'/>
+          </Link>
+        
+
+       </div>
+
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
