@@ -2,7 +2,7 @@
 "use client";
 
 import { Vortex } from "./ui/vortex";
-import { WavyBackground } from "./ui/wavy-background";
+
 
 const Quote = () => {
   return (
