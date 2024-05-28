@@ -54,8 +54,8 @@ const Contact = () => {
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
         </p>
-       <div className='flex gap-5 max-sm:flex-col'>
-       <a href="vilokmasuti@outlook.com">
+       <div className='flex gap-5 max-sm:flex-col cursor-pointer'>
+       <a href="mailto:vilokmasuti@outlook.com">
             <MagicButon
               title="Let's get in touch"
               icon={<FaLocationArrow />}
