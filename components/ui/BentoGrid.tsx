@@ -9,7 +9,7 @@ import { cn } from "../../utils/cn";
 
 
 
-import animationData from "@/data/confetti.json";
+import animationData from "../../Data/confetti.json";
 import MagicButton from "../ui/MagicButon";
 import GridGlobe from "./GridGlobe";
 
