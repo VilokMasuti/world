@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./Themeprovider";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ 
+  weight: "400", 
+  subsets: ["latin"] 
+});
 
 export const metadata: Metadata = {
   title: "VILOK",
@@ -12,26 +15,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-       <head>
+      <head>
         <link rel="icon" href="/v.png" sizes="any" />
       </head>
-      <body className={inter.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-      
-      
-      
+      <body className={montserrat.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

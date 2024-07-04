@@ -47,7 +47,7 @@ const Grid = () => {
             <div className="max-w-xs max-sm:h-[10px]" key={item.id}>
               {item.id === 2 && (
                 <>
-                  <h2 className="text-center font-mono text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]   bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 to-neutral-50">
+                  <h2 className="text-center  text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]   bg-clip-text text-transparent bg-gradient-to-b from-neutral-950 to-neutral-50">
                     {item.title}
                   </h2>
                   <p className="mt-4 text-left text-base/6 text-neutral-200">
@@ -61,7 +61,7 @@ const Grid = () => {
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-black"     className=" bg-zinc-950">
-        <h1 className=" font-mono font-semibold  text-3xl ml-24 mb-2   bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-950">TechStack</h1>
+        <h1 className="  font-semibold  text-3xl ml-24 mb-2   bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-950">TechStack</h1>
 
           <div className="flex flex-row max-sm:tracking-widest     duration-1000 max-sm:text-4xl items-center justify-center mb-10 w-full   gap-2">
            

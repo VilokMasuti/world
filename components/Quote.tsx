@@ -15,7 +15,7 @@ const Quote = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 5, delay: 6}}
       
-      className="max-md:text-6xl max-md:mt-[350px] text-3xl lg:text-9xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-900  text-center font-sans font-bold mt-24  relative z-20">
+      className="max-md:text-6xl max-md:mt-[350px] text-3xl lg:text-9xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 font-bold to-neutral-900  text-center   mt-24  relative z-20">
     MOST MEN WANT TO RULE OVER OTHERS BUT THE WISE MEN RULES OVER HIMSELF
       </motion.h1>
 

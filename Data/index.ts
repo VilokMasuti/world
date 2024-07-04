@@ -93,16 +93,16 @@ export const projects = [
     title: "Gemini clone",
     des: "This platform enabled all about to create your own Generative AI app like Google Gemini or ChatGPT In React JS. Gemini clone app using Gemini API ",
     img: "/g.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", ],
-    link: "https://adorable-bienenstitch-4eacd6.netlify.app/",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg",],
+    link: "https://gamini.netlify.app/",
   },
   {
     id: 4,
-    title: "Gifs",
-    des: "Recreated the Gifs website, combining  animations React and Tailwind..",
-    img: "/f.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", ],
-    link: "/ui.apple.com",
+    title: "X",
+    des: " This project is a clone of Twitter[X], built using the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS. The application replicates core Twitter features such as user authentication, tweeting, following, and real-time updates.",
+    img: "/x.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/m.svg"  ],
+    link: "/https://x-s7yo.onrender.com/login",
   },
 ];
 
