@@ -37,7 +37,7 @@ const Grid = () => {
     },
   ];
   return (
-    <section id="about">
+    <section className=" sm:bg-black" id="about">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full min-h-[300px] lg:min-h-[300px]"

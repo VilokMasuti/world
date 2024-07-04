@@ -12,7 +12,7 @@ import Approach from "@/components/Approach";
 
 export default function Home() {
   return (
-    <main className=" relative  flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className=" relative max-sm:bg-zinc-950  flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className=" max-w-7xl w-full">
 <FloatingNav navItems={navItems}/>
 <Hero/>
