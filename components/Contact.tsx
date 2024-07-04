@@ -48,7 +48,7 @@ const Contact = () => {
       </div>
 
       <div className="flex flex-col items-center ">
-        <h1 className="heading lg:max-w-[45vw] text-center font-semibold">
+        <h1 className="heading lg:max-w-[45vw] text-center font-semibold  max-sm:text-white">
           Ready to take <span className=" text-blue-500 font-bold">Your</span> digital presence to the next level?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
